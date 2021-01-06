@@ -1,7 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { withKnobs, select } from '@storybook/addon-knobs';
-import Button from './Button';
+import Button from 'components/atoms/Button/Button';
 
 export default {
   title: 'Atoms/Button',
@@ -16,11 +16,11 @@ export const Primary = () => {
     Secondary: 'hsl(196, 83%, 75%)',
     Tertiary: 'hsl(106, 47%, 64%)',
   };
-  const defaultValue = 'red';
+  const defaultValue = options.Primary;
   const groupId = 'GROUP-ID1';
 
   const value = select(label, options, defaultValue, groupId);
 
-  return <Button color={value}>close /save</Button>;
+  return <Button color={value}>close / save</Button>;
 };
 export const Secondary = () => <Button secondary>remove</Button>;

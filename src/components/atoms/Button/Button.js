@@ -4,11 +4,11 @@ const Button = styled.button`
   padding: 0;
   width: 220px;
   height: 47px;
-  background-color: ${({ color }) => color || 'hsl(49, 100%, 58%)'};
+  background-color: ${({ theme, color }) => color || theme.primary};
   color: #000;
   font-family: Montserrat, sans-serif;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: ${({ theme }) => theme.bold};
+  font-size: 1.6rem;
   border: none;
   border-radius: 50px;
   text-transform: uppercase;
@@ -18,8 +18,8 @@ const Button = styled.button`
     css`
       width: 100px;
       height: 30px;
-      font-size: 10px;
-      background-color: hsl(0, 0%, 90%);
+      font-size: 1rem;
+      background-color: ${({ theme }) => theme.grey200};
     `}
 `;
 export default Button;
